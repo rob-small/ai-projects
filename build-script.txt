@@ -9,7 +9,8 @@ docker run --gpus all -p 8888:8888 -v .:/projects -w /projects lilewite/nvidia-t
 docker run --gpus all -p 8889:8889 -v .:/projects -w /projects lilewite/nvidia-pytorch:v1
 docker run --gpus all -p 8890:8890 -v .:/projects -w /projects lilewite/nvidia-nemo:v1
 docker run -p 8891:8891 --env-file .env -v .:/projects -w /projects lilewite/python-openai:v1 
-docker run -p 8891:8891 --env-file .env -v .:/projects -w /projects lilewite/python-langchain:v1 
+docker run -p 8891:8892 --env-file .env -v .:/projects -w /projects lilewite/python-langchain:v1 
 docker run -it --gpus all -p 8888:8888 -v .:/projects nvcr.io/nvidia/tensorflow:23.06-tf2-py3
-docker run -p 8080:8891 -v .:/projects -w /projects lilewite/mlflow:v1
+docker run -p 8080:8080 -v .:/projects -w /projects lilewite/mlflow:v1
+
 

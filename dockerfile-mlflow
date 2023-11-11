@@ -1,5 +1,13 @@
 FROM  ghcr.io/mlflow/mlflow
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "8080" ]
+#FROM python:3
+
+#WORKDIR /usr/src/app
+
+#COPY requirements-openai.txt ./
+#RUN pip install mlflow
+
+# Set the MLflow server as the default command
+CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "8080"]
