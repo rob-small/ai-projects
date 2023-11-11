@@ -3,3 +3,5 @@
 notebooks/.ipynb_checkpoints/
 data/
 .env
+mlartifacts/
+mlruns/
