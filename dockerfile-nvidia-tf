@@ -1,6 +1,8 @@
 FROM  nvcr.io/nvidia/tensorflow:23.06-tf2-py3
 
 RUN pip install jupyterlab
+RUN pip install mlflow
+RUN pip install hyperopt
 
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root" ]
 
