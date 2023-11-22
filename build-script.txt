@@ -1,12 +1,17 @@
 docker build -t lilewite/nvidia-tf:v1 -f dockerfile-nvidia-tf .
 docker build -t lilewite/nvidia-pytorch:v1 -f dockerfile-nvidia-pytorch .
+docker build -t lilewite/nvidia-pytorch-hf:v1 -f dockerfile-nvidia-pytorch-hf .
 docker build -t lilewite/nvidia-nemo:v1 -f dockerfile-nvidia-nemo .
 docker build -t lilewite/python-openai:v1 -f dockerfile-python-openai .
+docker build -t lilewite/python-openai-oldapi:v1 -f dockerfile-python-openai-oldapi .
 docker build -t lilewite/python-langchain:v1 -f dockerfile-python-langchain .
 docker build -t lilewite/mlflow:v1 -f dockerfile-mlflow .
 
 docker run --network mlnetwork --network-alias tf --gpus all -p 8888:8888 -v .:/projects -w /projects lilewite/nvidia-tf:v1
 docker run --network mlnetwork --network-alias pytorch --gpus all -p 8889:8889 -v .:/projects -w /projects lilewite/nvidia-pytorch:v1
+docker run --network mlnetwork --network-alias pytorch-hf --gpus all -p 8889:8889 -v .:/projects -w /projects lilewite/nvidia-pytorch-hf:v1
+docker run --network mlnetwork --network-alias openai -p 8891:8891 --env-file .env -v .:/projects -w /projects lilewite/python-openai:v1 
+docker run --network mlnetwork --network-alias openai-oldapi -p 8891:8891 --env-file .env -v .:/projects -w /projects lilewite/python-openai-oldapi:v1 
 docker run --gpus all -p 8890:8890 -v .:/projects -w /projects lilewite/nvidia-nemo:v1
 docker run -p 8891:8891 --env-file .env -v .:/projects -w /projects lilewite/python-openai:v1 
 docker run -p 8891:8892 --env-file .env -v .:/projects -w /projects lilewite/python-langchain:v1 

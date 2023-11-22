@@ -5,8 +5,5 @@ data/
 .env
 mlartifacts/
 mlruns/
-notebooks/mlflow/.ipynb_checkpoints/hyperparameter_sweep-checkpoint.ipynb
-notebooks/mlflow/.ipynb_checkpoints/mlflow-test-checkpoint.ipynb
-.ipynb_checkpoints/build-script-checkpoint.txt
-.ipynb_checkpoints/dockerfile-nvidia-tf-checkpoint
-.ipynb_checkpoints/logging-first-model-checkpoint.ipynb
+notebooks/mlflow/.ipynb_checkpoints/
+.ipynb_checkpoints/
