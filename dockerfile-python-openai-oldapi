@@ -1,0 +1,12 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+
+RUN pip install openai==0.28
+RUN pip install jupyterlab
+RUN pip install mlflow
+RUN pip install --upgrade pip
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+RUN pip install tiktoken
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8891", "--allow-root" ]dockerfile-python-openai

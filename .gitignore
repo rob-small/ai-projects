@@ -3,3 +3,7 @@
 notebooks/.ipynb_checkpoints/
 data/
 .env
+mlartifacts/
+mlruns/
+notebooks/mlflow/.ipynb_checkpoints/
+.ipynb_checkpoints/
