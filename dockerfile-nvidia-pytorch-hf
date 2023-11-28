@@ -3,6 +3,8 @@ FROM  nvcr.io/nvidia/pytorch:23.06-py3
 RUN pip install jupyterlab
 RUN pip install mlflow
 RUN pip install transformers datasets
+RUN pip install accelerate
+RUN pip install evaluate
 
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8889", "--allow-root" ]
 

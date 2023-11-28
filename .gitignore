@@ -7,3 +7,6 @@ mlartifacts/
 mlruns/
 notebooks/mlflow/.ipynb_checkpoints/
 .ipynb_checkpoints/
+notebooks/hf/test_trainer/runs/
+notebooks/hf/yelp/models/
+.vscode/
