@@ -10,3 +10,6 @@ notebooks/mlflow/.ipynb_checkpoints/
 notebooks/hf/test_trainer/runs/
 notebooks/hf/yelp/models/
 .vscode/
+cache/huggingface/transformers/
+notebooks/hf/models/
+notebooks/hf/test-trainer/
